@@ -1,0 +1,114 @@
+.interface {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inner-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .left-container,
+  .right-container {
+    flex: 0.15; /* 15% of the total width */
+  }
+  
+  .search-container {
+    padding: 15px;
+    flex: 0.7; /* 70% of the total width */
+  }
+  
+  .search-input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 15px;
+    margin-left: 12px;
+  }
+  
+  .search-button {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: orangered;
+    color: white;
+    border-width: 0.5px;
+    margin-left: 10px; /* Add left margin */
+  }
+  
+  /* Media query for screens smaller than 423px */
+  @media (max-width: 423px) {
+    .search-button {
+      margin-left: 0; /* Reset left margin */
+    }
+  }
+  
+  .user-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-nickname {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .user-status {
+    color: #888;
+  }
+  
+  /* Media query for screens smaller than 600px */
+  @media (max-width: 600px) {
+    .inner-container {
+      flex-direction: column;
+    }
+  
+    .left-container,
+    .right-container,
+    .search-container {
+      flex: 1; /* Take up the full width */
+    }
+  
+    .user-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .user-avatar {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  /* Media query for screens smaller than 423px */
+/* Media query for screens smaller than 423px */
+@media (max-width: 423px) {
+    .search-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-input {
+      margin-bottom: 10px;
+      width: 100%; /* Set width to 100% */
+      margin-left: 0;
+    }
+  
+    .search-button {
+      flex:1;
+      width: 100%; /* Set width to 100% */
+    }
+  }
