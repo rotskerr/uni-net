@@ -9,6 +9,7 @@ import SignUp from "./Pages/RegisterPage/SignUp";
 import ProtectedRoute from "../src/Components/Navigation/ProtectedRoute";
 import UserCustomization from "./Pages/Profile/UserCustomization"; // Make sure this path is correct
 import Explore from "./Pages/Explore/Explore";
+import CreateNewPost from "./Components/Post/CreateNewPost";
 
 const App = () => {
   const [friendProfile, setFriendsProfile] = useState([]);
@@ -52,6 +53,11 @@ const App = () => {
         <Route
           path="/explore"
           element={<ProtectedRoute element={<Explore />} />}
+        />
+
+        <Route
+          path="/create"
+          element={<ProtectedRoute element={<CreateNewPost />} />}
         />
 
         <Route path="/" element={<Login />} />

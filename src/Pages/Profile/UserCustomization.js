@@ -96,9 +96,9 @@ function UserCustomization() {
     <div className="container">
       <form className="container-form" onSubmit={handleSubmit}>
         <h1 className="form-title">User Customization</h1>
-        <label htmlFor="avatar-upload">
-          <img src={imageUrl} alt="avatar" className="avatar" />
-        </label>
+        <label htmlFor="avatar-upload" className="label-center">
+  <img src={imageUrl} alt="avatar" className="avatar" />
+</label>
         <input
           id="avatar-upload"
           type="file"

@@ -10,13 +10,23 @@ import { FiSettings } from "react-icons/fi";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import Profile from "../../assets/profile.jpg";
 import { getMyProfileInfo } from "../../utils/api";
+import CreateNewPost from "../Post/CreateNewPost";
+import { Modal } from "@mantine/core";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const Left = ({ profileImg, modelDetails }) => {
   const navigate = useNavigate();
   const [btnActive, setBtnActive] = useState("#");
   const [logOutExit, setLogOutExit] = useState(false);
   const [profileInfo, setProfileInfo] = useState(null);
+  const [isNewPostOpen, setIsNewPostOpen] = useState(false); // New state for tracking the modal window
+  const openNewPost = () => {
+    setIsNewPostOpen(true);
+  };
 
+  const closeNewPost = () => {
+    setIsNewPostOpen(false);
+  };
   useEffect(() => {
     const fetchProfileInfo = async () => {
       const info = await getMyProfileInfo();
@@ -100,33 +110,28 @@ const Left = ({ profileImg, modelDetails }) => {
 
       <div
         id="L-box"
-        onClick={() => setBtnActive("#trending")}
-        className={btnActive === "#trending" ? "active" : ""}
+        className={btnActive === "#newPost" ? "active" : ""}
+        onClick={openNewPost}
       >
-        <h1 className="notifi">
-          <FiTrendingUp className="margin" />
-        </h1>
-        <span>Trending</span>
+        <AiOutlinePlusCircle className="margin" />
+        <span>New Post</span>
       </div>
-
-      <div
-        id="L-box"
-        onClick={() => setBtnActive("#lists")}
-        className={btnActive === "#lists" ? "active" : ""}
+      <Modal
+        opened={isNewPostOpen}
+        onClose={closeNewPost}
+        title="Create New Post"
+        transition="fade"
+        transitionDuration={200}
+        padding="20px"
+        radius="8px"
+        zIndex={2000}
       >
-        <RiFileListLine className="margin" />
-        <span>Lists</span>
-      </div>
+        <CreateNewPost />
+      </Modal>
 
-      <div
-        id="L-box"
-        onClick={() => setBtnActive("#saved")}
-        className={btnActive === "#saved" ? "active" : ""}
-      >
-        <BsBookmark className="margin" />
-        <span>Saved</span>
-      </div>
+     
 
+      
       <div
         id="L-box"
         onClick={() => setBtnActive("#settings")}
