@@ -1,11 +1,18 @@
 import React from 'react'
 import Nav from '../../Components/Navigation/Nav'
 import Left from '../../Components/LeftSide/Left'
-import FriendsProfileMiddle from '../../Components/FriendsProfile/FriendsProfileMiddle'
+import FriendsProfileMiddle from '../../сomponents/FriendsProfile/FriendsProfileMiddle'
 import { useState } from 'react'
 import Right from '../../Components/RightSide/Right'
 import "../FriendsId/FriendsId.css"
 
+/**
+ * FriendsId компонент.
+ *
+ * @param {Object} props - Властивості компонента.
+ * @param {Array} props.friendProfile - Масив профілів друзів.
+ * @returns {JSX.Element} Компонент React.
+ */
 const FriendsId = ({friendProfile}) => {
 
   const [search,setSearch] =useState("")

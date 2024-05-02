@@ -1,3 +1,40 @@
+/**
+ * UserCustomization component.
+ *
+ * This component is responsible for handling user customization. It allows users to update their name, status, description, and avatar, and to lock or unlock their account.
+ *
+ * The component maintains several pieces of state: `name`, `status`, `description`, `isLocked`, `imageUrl`, and `selectedImage`.
+ *
+ * The `handleImageChange` function is used to handle the selection of a new avatar image. It creates a URL object from the selected file and sets it as the new image URL.
+ *
+ * The `handleImageUpload` function is used to handle the upload of the selected image to Firebase Storage. It returns a promise that resolves with the download URL of the uploaded image.
+ *
+ * The `handleSubmit` function is used to handle the submission of the form. It sends a PUT request to the API to update the user's information.
+ *
+ * The component returns a JSX element that includes a form for user customization. The form includes fields for the user's name, status, description, and avatar, a checkbox to lock or unlock the account, and a button to submit the form.
+ *
+ * @returns {JSX.Element} The rendered UserCustomization component.
+ *
+ * @example
+ * <UserCustomization />
+ *
+ * @property {string} name - The user's name.
+ * @property {Function} setName - Function to set the user's name.
+ * @property {string} status - The user's status.
+ * @property {Function} setStatus - Function to set the user's status.
+ * @property {string} description - The user's description.
+ * @property {Function} setDescription - Function to set the user's description.
+ * @property {boolean} isLocked - Boolean indicating whether the user's account is locked.
+ * @property {Function} setIsLocked - Function to set the `isLocked` state.
+ * @property {string} imageUrl - The URL of the user's avatar image.
+ * @property {Function} setImageUrl - Function to set the `imageUrl`.
+ * @property {File} selectedImage - The selected image file.
+ * @property {Function} setSelectedImage - Function to set the `selectedImage`.
+ * @property {Function} handleImageChange - Function to handle the selection of a new avatar image.
+ * @property {Function} handleImageUpload - Function to handle the upload of the selected image.
+ * @property {Function} handleSubmit - Function to handle the submission of the form.
+ */
+
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";

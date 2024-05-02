@@ -1,3 +1,31 @@
+/**
+ * SignUp component.
+ *
+ * This component is responsible for handling user registration. It maintains three pieces of state: `data` (an object containing the user's nickname, email, password, and password confirmation), `submit` (a boolean indicating whether the form has been submitted), and `error` (an object containing any error messages).
+ *
+ * The `handleChange` function is used to update the `data` state when the user types in any of the input fields.
+ *
+ * The `handleSignUp` function is used to handle the form submission. It sends a POST request to the API with the user's nickname, email, password, and password confirmation. If the response status is 201, it stores the returned token in local storage and navigates to the customization page. If there is an error, it updates the `error` state with the error message.
+ *
+ * The `useEffect` hook is used to navigate to the home page when the form has been submitted and there are no errors.
+ *
+ * The component returns a JSX element that includes a form for user registration. The form includes fields for the user's nickname, email, password, and password confirmation, and a button to submit the form.
+ *
+ * @returns {JSX.Element} The rendered SignUp component.
+ *
+ * @example
+ * <SignUp />
+ *
+ * @property {Object} data - An object containing the user's nickname, email, password, and password confirmation.
+ * @property {Function} setData - Function to set the `data` state.
+ * @property {boolean} submit - Boolean indicating whether the form has been submitted.
+ * @property {Function} setSubmit - Function to set the `submit` state.
+ * @property {Object} error - An object containing any error messages.
+ * @property {Function} setError - Function to set the `error` state.
+ * @property {Function} handleChange - Function to handle changes in the input fields.
+ * @property {Function} handleSignUp - Function to handle the form submission.
+ */
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { AiOutlineUser } from "react-icons/ai";

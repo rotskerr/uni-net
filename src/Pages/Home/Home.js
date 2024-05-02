@@ -37,7 +37,34 @@ import Middle from "../../Components/MiddleSide/Middle"
 import Right from '../../Components/RightSide/Right'
 import Nav from '../../Components/Navigation/Nav'
 import moment from 'moment/moment'
-
+/**
+ * Home component.
+ *
+ * @component
+ * @param {Object} props - Component props
+ * @param {Function} props.setFriendsProfile - Function to set friends profile
+ *
+ * @returns {React.Element} Rendered Home component
+ *
+ * @example
+ * <Home setFriendsProfile={setFriendsProfile} />
+ *
+ * @property {Array} posts - Array of post objects. Each object contains information about a post such as id, username, profile picture, image, date and time, body of the post, number of likes, number of comments, cover picture, user id, country name, job name, joined date and number of followers.
+ * @property {Function} setPosts - Function to set the posts.
+ * @property {string} body - Body of the post.
+ * @property {Function} setBody - Function to set the body of the post.
+ * @property {string} importFile - Imported file.
+ * @property {Function} setImportFile - Function to set the imported file.
+ * @property {Function} handleSubmit - Function to handle the submission of the post.
+ * @property {string} search - Search string.
+ * @property {Function} setSearch - Function to set the search string.
+ * @property {string} following - Following string.
+ * @property {Function} setFollowing - Function to set the following string.
+ * @property {boolean} showMenu - Boolean to show or hide the menu.
+ * @property {Function} setShowMenu - Function to set the showMenu boolean.
+ * @property {Object} images - Images object.
+ * @property {Function} setImages - Function to set the images.
+ */
 const Home = ({setFriendsProfile}) => {
   
     const [posts,setPosts] = useState(

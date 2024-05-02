@@ -8,6 +8,16 @@ import {AiOutlineHome} from "react-icons/ai"
 import ProfileImg from "../../assets/profile.jpg"
 import { Link } from 'react-router-dom'
 
+/**
+ * Notification component.
+ *
+ * This component is responsible for displaying notifications to the user.
+ * Each notification includes an image, a message, and a timestamp.
+ *
+ * The component also includes links to the home and profile pages.
+ *
+ * @returns {JSX.Element} The rendered Notification component.
+ */
 const Notification = () => {
   
   return (

@@ -1,3 +1,29 @@
+/**
+ * Login component.
+ *
+ * This component is responsible for handling user login. It maintains two pieces of state: `data` (an object containing the user's email and password) and `submit` (a boolean indicating whether the form has been submitted).
+ *
+ * The `handleChange` function is used to update the `data` state when the user types in the email or password field.
+ *
+ * The `handleLogin` function is used to handle the form submission. It sends a POST request to the API with the user's email and password. If the response status is 201, it stores the returned token and user ID in local storage and sets the `submit` state to true.
+ *
+ * The `useEffect` hook is used to navigate to the home page when the `submit` state is true.
+ *
+ * The component returns a JSX element that includes a form for user login. The form includes fields for the user's email and password, and a button to submit the form.
+ *
+ * @returns {JSX.Element} The rendered Login component.
+ *
+ * @example
+ * <Login />
+ *
+ * @property {Object} data - An object containing the user's email and password.
+ * @property {Function} setData - Function to set the `data` state.
+ * @property {boolean} submit - Boolean indicating whether the form has been submitted.
+ * @property {Function} setSubmit - Function to set the `submit` state.
+ * @property {Function} handleChange - Function to handle changes in the email and password fields.
+ * @property {Function} handleLogin - Function to handle the form submission.
+ */
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FiMail } from "react-icons/fi";

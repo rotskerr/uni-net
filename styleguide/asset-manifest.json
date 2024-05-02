@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/build/bundle.a3616a24.js",
+    "main.css": "/static/css/main.1a7186dc.css",
+    "img-2.jpg": "/de861c402dc755f78e75.jpg",
+    "img2.jpg": "/194978cd21d26c5db18a.jpg",
+    "img-3.jpg": "/ba202fb67be94543a1cf.jpg",
+    "img3.jpg": "/bbbf293919def825d407.jpg",
+    "img-1.jpg": "/ddd89f0877545b559e14.jpg",
+    "img1.jpg": "/8179f7e27b4b616d0c56.jpg",
+    "img5.jpg": "/801551ad8d5dda410649.jpg",
+    "img-5.jpg": "/6032f2a0884749352037.jpg",
+    "img6.jpg": "/c5d533f9a88e20c226e3.jpg",
+    "img-4.jpg": "/27a2e1cebd3637af6ad2.jpg",
+    "img4.jpg": "/4f7a0d5d996100ac88fd.jpg",
+    "profile.jpg": "/37c00bd17fbdfc287685.jpg",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "build/bundle.a3616a24.js",
+    "static/css/main.1a7186dc.css"
+  ]
+}

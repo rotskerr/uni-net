@@ -5,6 +5,29 @@ import Right from "../../Components/RightSide/Right";
 import "./Explore.css";
 import axios from "axios";
 
+/**
+ * Explore component.
+ *
+ * This component is responsible for handling user search queries and displaying the results.
+ * It maintains three pieces of state: `search` (the current search query), `showMenu` (a boolean indicating whether to show a menu), and `results` (the search results).
+ *
+ * The `handleSearch` function is used to send the search query to an API and update the `results` state with the response.
+ *
+ * The component returns a JSX element that includes a `Nav` component, a search input field, a search button, and a container for displaying the search results. Each result is displayed with a user avatar, nickname, and status.
+ *
+ * @returns {JSX.Element} The rendered Explore component.
+ *
+ * @example
+ * <Explore />
+ *
+ * @property {string} search - The current search query.
+ * @property {Function} setSearch - Function to set the search query.
+ * @property {boolean} showMenu - Boolean indicating whether to show a menu.
+ * @property {Function} setShowMenu - Function to set the `showMenu` state.
+ * @property {Array} results - The search results.
+ * @property {Function} setResults - Function to set the search results.
+ * @property {Function} handleSearch - Function to handle the search query.
+ */
 const Explore = () => {
   const [search, setSearch] = useState("");
   const [showMenu, setShowMenu] = useState(false);
@@ -29,7 +52,6 @@ const Explore = () => {
       console.error("Failed to fetch:", error);
     }
   };
-
   return (
     <div className="interface">
       <Nav
